@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href=" https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <style>
+        .group:hover img {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .group:hover .bg-black {
+            opacity: 0.8;
+        }
+
+        .swiper {
+            width: 100%;
+            /* height: 30rem; */
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 5rem;
+            height: 5rem;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="nav-bar">
+
+        <!-- POSITION ABSOLUTE ELEMENT -->
+        <div id="overlay"
+            class="fixed bg-black z-30 h-100vh w-full opacity-0 transition duration-700 ease-in-out hidden"></div>
+        <img class="fixed top-0 left-0 w-full -z-10 md:h-100vh sm:h-85vh"
+            src="https://images.pexels.com/photos/3088778/pexels-photo-3088778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <!-- |||||| -->
+
+        <!-- MENU -->
+
+        <div class="fixed z-50 top-0 right-0 b-0 w-2/4 overflow-hidden h-100vh bg-black p-4 md:p-10 transition duration-700 ease-in-out"
+            id="navigation" style="transform: translateX(100%);">
+            <div class="flex justify-between">
+                <div>
+                    <h1 class="text-sm text-green font-bold">NAVIGATION</h1>
+                    <h1 class="text-sm md:text-xl hover:text-green mt-10"><a href="#">Home</a></h1>
+                    <h1 class="text-sm md:text-xl hover:text-green pt-2"><a href="#we-are-glint">About</a></h1>
+                    <h1 class="text-sm md:text-xl hover:text-green pt-2"><a href="#what-we-do">What We Do ?</a></h1>
+                    <h1 class="text-sm md:text-xl hover:text-green pt-2"><a href="#recent-work">Work</a></h1>
+                    <h1 class="text-sm md:text-xl hover:text-green pt-2"><a href="#contact-us">Contact</a></h1>
+                </div>
+
+                <i class="fa-solid fa-xmark font-bold text-white cursor-pointer text-2xl" id="x"></i>
+            </div>
+            <p class="text-base mt-5">Perspiciatis hic praesentium nesciunt. Et neque a dolorum voluptatem porro iusto
+                sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+            <div class="flex mt-5 md:mt-10">
+                <i
+                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-facebook-f"></i>
+                <i
+                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-instagram"></i>
+                <i
+                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-twitter"></i>
+                <i
+                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-telegram"></i>
+            </div>
+        </div>
+        <div class="mx-auto flex justify-between items-center md:h-10vh sm:h-10vh w-11/12 ">
+            <h1 class="font-bold text-white text-4xl md:text-2xl sm:text-2xl lg:text-4xl">
+                Glint.
+            </h1>
+            <div class="flex justify-between items-center bg-black md:p-3 sm:p-1 fixed right-5 md:right-10 z-40 cursor-pointer"
+                id="menu-icon">
+                <h1
+                    class="text-green-500 hover:text-green transition ease-in-out delay-150 mr-4 text-white text-sm tracking-widest">
+                    MENU
+                </h1>
+                <i class="fa-solid fa-bars text-white text-xl cursor-pointer"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO -->
+
+    <section id="hero" class="relative">
+        <div
+            class="relative flex items-center w-11/12 mx-auto md:justify-between sm:justify-center md:text-left sm:text-center md:h-90vh sm:h-65vh">
+            <div class="md:ml-20 sm:ml-0 md:w-2/4 sm:w-full">
+                <h1 class=" lg:text-2xl md:text-base sm:text-sm text-white md:text-gray-500">
+                    WELLCOME TO GLINT
+                </h1>
+                <h1 class="text-white font-semibold mt-2 lg:text-5xl md:text-3xl sm:text-3xl">
+                    We are a creative group of people who design influential brands and
+                    digital experiences.
+                </h1>
+                <div class="flex mt-10 md:justify-start sm:justify-center sm:w-full">
+                    <button
+                        class="text-white border border-white py-3 px-4 hover:bg-white hover:text-black transition ease-in-out delay-75 lg:text-sm sm:text-0.5rem mr-1">
+                        START A PROJECT
+                    </button>
+                    <button
+                        class="text-white border border-white py-3 px-4 hover:bg-white hover:text-black transition ease-in-out delay-75 lg:text-sm sm:text-0.5rem ml-1">
+                        START A PROJECT
+                    </button>
+                </div>
+            </div>
+            <div class="flex-col md:flex sm:hidden">
+                <div class="text-white border-2 border-white h-8 w-8 rounded-3xl flex justify-center items-center mt-4 cursor-pointer tooltip tooltip-left transition duration-700 ease-in-out hover:bg-green"
+                    data-tip="FACEBOOK">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="text-white border-2 border-white h-8 w-8 rounded-3xl flex justify-center items-center mt-4 cursor-pointer tooltip tooltip-left transition duration-700 ease-in-out hover:bg-green"
+                    data-tip="INSTAGRAM">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="text-white border-2 border-white h-8 w-8 rounded-3xl flex justify-center items-center mt-4 cursor-pointer tooltip tooltip-left transition duration-700 ease-in-out hover:bg-green"
+                    data-tip="TELEGRAM">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div class="text-white border-2 border-white h-8 w-8 rounded-3xl flex justify-center items-center mt-4 cursor-pointer tooltip tooltip-left transition duration-700 ease-in-out hover:bg-green"
+                    data-tip="TWITTER">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="text-white border-2 border-white h-8 w-8 rounded-3xl flex justify-center items-center mt-4 cursor-pointer tooltip tooltip-left transition duration-700 ease-in-out hover:bg-green"
+                    data-tip="GOOGLE">
+                    <i class="fa-brands fa-google"></i>
+                </div>
+            </div>
+            <div class="absolute right-0 bottom-0 flex items-start">
+                <h1 class="text-sm text-white mr-5">
+                    <a href="#we-are-glint"><span class="text-green">&#10597;</span> SCROLL DOWN</a>
+                </h1>
+                <div class="h-10vh w-0.2rem bg-green"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- we are glint -->
+
+    <section id="we-are-glint" class="bg-green pb-10">
+        <div class="bg-green w-full lg:h-100vh">
+            <div class="w-11/12 mx-auto relative">
+                <div class="h-10vh w-0.2rem bg-white absolute right-0 top-0"></div>
+                <div class="text-center">
+                    <div class="reveal">
+                        <h1 class="text-black font-bold lg:text-2xl md:text-base sm:text-sm md:pt-10 sm:pt-5">
+                            WELLCOME TO GLINT
+                        </h1>
+                        <h1 class="text-white font-bold mt-2 md:text-6xl sm:text-3xl">
+                            We Are Glint
+                        </h1>
+                    </div>
+
+                    <hr class="w-2/3 mx-auto md:my-10 sm:my-5" />
+                    <h1 class="text-black md:text-2xl sm:text-xl reveal">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt.
+                    </h1>
+                    <!-- for md up screen -->
+
+                    <div class="md:mt-20 sm:mt-10 md:flex sm:hidden reveal">
+                        <div class="h-20vh md:w-3/12 sm:w-full border-r-2 flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white data-goal increase" data-goal="100">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Awards Received</h1>
+                        </div>
+                        <div class="h-20vh md:w-3/12 sm:w-full border-r-2 flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white increase" data-goal="200">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Cups of Coffee</h1>
+                        </div>
+                        <div class="h-20vh md:w-3/12 sm:w-full border-r-2 flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white increase" data-goal="250">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Projects Completed</h1>
+                        </div>
+                        <div class="h-20vh md:w-3/12 sm:w-full flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white increase" data-goal="50">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Happy Clients</h1>
+                        </div>
+                    </div>
+
+                    <!-- for small screen -->
+
+                    <div class="md:mt-20 sm:mt-10 md:hidden w-3/4 mx-auto pb-10 reveal">
+                        <div class="h-20vh md:w-3/12 sm:w-full border-b-2 flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white data-goal increase" data-goal="100">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Awards Received</h1>
+                        </div>
+                        <div class="h-20vh md:w-3/12 sm:w-full border-b-2 flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white increase" data-goal="200">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Cups of Coffee</h1>
+                        </div>
+                        <div class="h-20vh md:w-3/12 sm:w-full border-b-2 flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white increase" data-goal="250">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Projects Completed</h1>
+                        </div>
+                        <div class="h-20vh md:w-3/12 sm:w-full flex flex-col justify-center">
+                            <h1 class="text-6xl font-bold text-white increase" data-goal="50">0</h1>
+                            <h1 class="text-black text-2xl mt-2 font-semibold">Happy Clients</h1>
+                        </div>
+                    </div>
+
+                    <!-- responsive -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- what we do  -->
+
+    <section id="what-we-do">
+        <div class="bg-white w-full md:pb-10">
+            <div class="w-11/12 mx-auto">
+                <div class="text-center reveal">
+                    <h1 class="text-green font-bold lg:text-2xl md:text-base sm:text-sm md:pt-10 sm:pt-5">
+                        WHAT WE DO
+                    </h1>
+                    <h1 class="text-black font-bold mt-2 md:text-6xl sm:text-xl">
+                        We’ve got everything you need to launch and grow your business
+                    </h1>
+                </div>
+                <hr class="w-3/12 mx-auto md:my-10 sm:my-5" />
+
+                <div class=" justify-between md:flex reveal">
+                    <div class=" md:w-45%">
+                        <div class="flex items-start h-40">
+                            <i class="fa-solid fa-broom text-green text-2xl md:text-4xl "></i>
+                            <div style="margin-left: 1rem;">
+                                <h1 class="text-2xl md:text-4xl  font-semibold">Brand Identity</h1>
+                                <p class="mt-5 " style="color: gray;">Nemo cupiditate ab quibusdam quaerat impedit
+                                    magni. Earum suscipit ipsum laudantium.
+                                    Quo
+                                    delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque
+                                    veritatis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start h-40 mt-5 ">
+                            <i class="fa-solid fa-bullhorn text-green text-2xl md:text-4xl "></i>
+                            <div style="margin-left: 1rem;">
+                                <h1 class="text-2xl md:text-4xl  font-semibold">Marketing</h1>
+                                <p class="mt-5 " style="color: gray;">Nemo cupiditate ab quibusdam quaerat impedit
+                                    magni. Earum suscipit ipsum laudantium.
+                                    Quo
+                                    delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque
+                                    veritatis.
+                                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start h-40 mt-5 ">
+                            <i class="fa-solid fa-box text-green text-2xl md:text-4xl "></i>
+                            <div style="margin-left: 1rem;">
+                                <h1 class="text-2xl md:text-4xl  font-semibold">Package Making</h1>
+                                <p class="mt-5 " style="color: gray;">Nemo cupiditate ab quibusdam quaerat impedit
+                                    magni. Earum suscipit ipsum laudantium.
+                                    Quo
+                                    delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque
+                                    veritatis.
+                                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-45% mt-5 md:mt-0 pb-10 md:pb-0">
+                        <div class="flex items-start h-40">
+                            <i class="fa-solid fa-bezier-curve text-green text-2xl md:text-4xl "></i>
+
+                            <div style="margin-left: 1rem;">
+                                <h1 class="text-2xl md:text-4xl  font-semibold">Lllustration</h1>
+                                <p class="mt-5 " style="color: gray;">Nemo cupiditate ab quibusdam quaerat impedit
+                                    magni. Earum suscipit ipsum laudantium.
+                                    Quo
+                                    delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque
+                                    veritatis.
+                                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start h-40 mt-5 ">
+                            <i class="fa-solid fa-earth-americas text-green text-2xl md:text-4xl "></i>
+                            <div style="margin-left: 1rem;">
+                                <h1 class="text-2xl md:text-4xl  font-semibold">Web Design</h1>
+                                <p class="mt-5 " style="color: gray;">Nemo cupiditate ab quibusdam quaerat impedit
+                                    magni. Earum suscipit ipsum laudantium.
+                                    Quo
+                                    delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque
+                                    veritatis.
+                                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start h-40 mt-5 ">
+                            <i class="fa-brands fa-chrome text-green text-2xl md:text-4xl"></i>
+                            <div style="margin-left: 1rem;">
+                                <h1 class="text-2xl md:text-4xl  font-semibold">Web Development</h1>
+                                <p class="mt-5 " style="color: gray;">Nemo cupiditate ab quibusdam quaerat impedit
+                                    magni. Earum suscipit ipsum laudantium.
+                                    Quo
+                                    delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque
+                                    veritatis.
+                                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENT WORKS -->
+
+    <section id="recent-work" class="bg-white">
+        <div class="bg-black w-full h-72 md:h-96">
+            <div class="text-center reveal">
+                <h1 class="text-green font-bold lg:text-2xl md:text-base sm:text-sm md:pt-10 sm:pt-5">
+                    RECENT WORKS
+                </h1>
+                <h1 class="text-white font-bold mt-2 md:text-6xl sm:text-xl">
+                    We love what we do, check out some of our latest works
+                </h1>
+                <hr class="w-3/12 mx-auto md:my-10 sm:my-5 text-white" />
+            </div>
+        </div>
+        <div class="mx-auto w-11/12 md:w-4/5 pb-20 bg-white" style="margin-top: -5rem;">
+            <div class="grid grid-cols-2">
+                <div class="group overflow-hidden relative cursor-pointer reveal">
+                    <img src="https://images.pexels.com/photos/12467948/pexels-photo-12467948.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="max-w-full object-cover w-full h-full max-h-full transition duration-700 ease-in-out">
+
+                    <div class="bg-black h-full w-full absolute top-0 left-0 opacity-0 transition duration-700">
+                        <h1 class="text-2xl z-1000 text-white ml-10 mt-5"><i class="fa-solid fa-link"></i></h1>
+                        <h1 class="text-2xl z-1000 ml-10 mt-5 text-white">Beautiful Girl</h1>
+                    </div>
+
+                </div>
+                <div class="group overflow-hidden relative cursor-pointer ">
+                    <img src="https://images.pexels.com/photos/12361807/pexels-photo-12361807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class=" max-w-full object-cover w-full h-full max-h-full transition duration-700 ease-in-out">
+
+                    <div
+                        class="bg-black h-full w-full absolute top-0 left-0 opacity-0 transition duration-700 ease-in-out">
+                        <h1 class="text-2xl z-1000 text-white ml-10 mt-5"><i class="fa-solid fa-link"></i></h1>
+                        <h1 class="text-2xl z-1000 ml-10 mt-5 text-white">Sad Girl</h1>
+                    </div>
+
+                </div>
+                <div class="group overflow-hidden relative cursor-pointer ">
+                    <img src="https://images.pexels.com/photos/11987149/pexels-photo-11987149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class=" max-w-full object-cover w-full h-full max-h-full transition duration-700 ease-in-out">
+
+                    <div
+                        class="bg-black h-full w-full absolute top-0 left-0 opacity-0 transition duration-700 ease-in-out">
+                        <h1 class="text-2xl z-1000 text-white ml-10 mt-5"><i class="fa-solid fa-link"></i></h1>
+                        <h1 class="text-2xl z-1000 ml-10 mt-5 text-white">Sea Girl</h1>
+                    </div>
+                </div>
+                <div class="group overflow-hidden relative cursor-pointer reveal">
+                    <img src="https://images.pexels.com/photos/4641103/pexels-photo-4641103.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        class=" max-w-full object-cover w-full h-full max-h-full transition duration-700 ease-in-out">
+
+                    <div
+                        class="bg-black h-full w-full absolute top-0 left-0 opacity-0 transition duration-700 ease-in-out">
+                        <h1 class="text-2xl z-1000 text-white ml-10 mt-5"><i class="fa-solid fa-link"></i></h1>
+                        <h1 class="text-2xl z-1000 ml-10 mt-5 text-white">Red Girl</h1>
+                    </div>
+                </div>
+                <div class="group overflow-hidden relative cursor-pointer reveal">
+                    <img src="https://images.pexels.com/photos/2933943/pexels-photo-2933943.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        class=" max-w-full object-cover w-full h-full max-h-full transition duration-700 ease-in-out">
+
+                    <div
+                        class="bg-black h-full w-full absolute top-0 left-0 opacity-0 transition duration-700 ease-in-out">
+                        <h1 class="text-2xl z-1000 text-white ml-10 mt-5"><i class="fa-solid fa-link"></i></h1>
+                        <h1 class="text-2xl z-1000 ml-10 mt-5 text-white">Sea</h1>
+                    </div>
+                </div>
+                <div class="group overflow-hidden relative cursor-pointer">
+                    <img src="https://images.pexels.com/photos/2073701/pexels-photo-2073701.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                        class=" max-w-full object-cover w-full h-full max-h-full transition duration-700 ease-in-out">
+
+                    <div
+                        class="bg-black h-full w-full absolute top-0 left-0 opacity-0 transition duration-700 ease-in-out">
+                        <h1 class="text-2xl z-1000 text-white ml-10 mt-5"><i class="fa-solid fa-link"></i></h1>
+                        <h1 class="text-2xl z-1000 ml-10 mt-5 text-white">Island</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR CLIENT  -->
+
+    <section id="our-client">
+        <div class="bg-gray-200 w-full">
+            <div class="mx-auto w-11/12 md:w-4/5 pb-40">
+                <div class="text-center reveal">
+                    <h1 class="text-green font-bold lg:text-2xl md:text-base sm:text-sm md:pt-10 sm:pt-5">
+                        OUR CLIENTS
+                    </h1>
+                    <h1 class="text-black font-bold mt-2 md:text-6xl sm:text-xl">
+                        We love what we do, check out some of our latest works
+                    </h1>
+                    <hr class="w-3/12 mx-auto md:my-10 sm:my-5 " />
+                </div>
+
+                <div class="flex justify-between reveal">
+                    <i
+                        class="fa-brands fa-apple  cursor-pointer text-gray-500 transition duration-700 ease-in-out hover:text-black sm:text-3xl md:text-8xl"></i>
+                    <i
+                        class="fa-solid fa-atom  cursor-pointer text-gray-500 transition duration-700 ease-in-out hover:text-black sm:text-3xl md:text-8xl"></i>
+                    <i
+                        class="fa-brands fa-dropbox  cursor-pointer text-gray-500 transition duration-700 ease-in-out hover:text-black sm:text-3xl md:text-8xl"></i>
+                    <i
+                        class="fa-brands fa-chrome  cursor-pointer text-gray-500 transition duration-700 ease-in-out hover:text-black sm:text-3xl md:text-8xl"></i>
+                    <i
+                        class="fa-brands fa-firefox  cursor-pointer text-gray-500 transition duration-700 ease-in-out hover:text-black sm:text-3xl md:text-8xl"></i>
+                </div>
+
+                <div class="swiper mySwiper mt-10 reveal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="text-center w-2/3 mx-auto ">
+                                <h1 class=" sm:text-xl md:text-2xl pt-10">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Quas sint blanditiis deleniti quidem dolore neque quae voluptatem enim assumenda
+                                    porro
+                                    ducimus nesciunt doloremque cum at atque, voluptate, animi praesentium pariatur.
+                                </h1>
+                                <div class="mt-10 text-center flex justify-center flex-col items-center">
+                                    <img src="https://images.pexels.com/photos/2657582/pexels-photo-2657582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        class="w-20 h-20 rounded-full " />
+                                    <h1 class="text-xl mt-5 text-black font-bold">Sunder Pichai</h1>
+                                    <p class="text-base pb-10">CEO Google</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="text-center w-2/3 mx-auto ">
+                                <h1 class=" sm:text-xl md:text-2xl pt-10">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Quas sint blanditiis deleniti quidem dolore neque quae voluptatem enim assumenda
+                                    porro
+                                    ducimus nesciunt doloremque cum at atque, voluptate, animi praesentium pariatur.
+                                </h1>
+                                <div class="mt-10 text-center flex justify-center flex-col items-center">
+                                    <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"
+                                        class="w-20 h-20 rounded-full " />
+                                    <h1 class="text-xl mt-5 text-black font-bold">Sunder Pichai</h1>
+                                    <p class="text-base pb-10">CEO Google</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="text-center w-2/3 mx-auto ">
+                                <h1 class=" sm:text-xl md:text-2xl pt-10">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Quas sint blanditiis deleniti quidem dolore neque quae voluptatem enim assumenda
+                                    porro
+                                    ducimus nesciunt doloremque cum at atque, voluptate, animi praesentium pariatur.
+                                </h1>
+                                <div class="mt-10 text-center flex justify-center flex-col items-center">
+                                    <img src="https://media.istockphoto.com/photos/portrait-beautiful-young-woman-with-clean-fresh-skin-picture-id1324877086?b=1&k=20&m=1324877086&s=170667a&w=0&h=dKlUFTPJG6Ytnclug4XynIS1oDmCx1A49OKXs1r68Uc="
+                                        class="w-20 h-20 rounded-full " />
+                                    <h1 class="text-xl mt-5 text-black font-bold">Sunder Pichai</h1>
+                                    <p class="text-base pb-10">CEO Google</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="text-center w-2/3 mx-auto ">
+                                <h1 class=" sm:text-xl md:text-2xl pt-10">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Quas sint blanditiis deleniti quidem dolore neque quae voluptatem enim assumenda
+                                    porro
+                                    ducimus nesciunt doloremque cum at atque, voluptate, animi praesentium pariatur.
+                                    
+                                </h1>
+                                <div class="mt-10 text-center flex justify-center flex-col items-center">
+                                    <img src="https://images.pexels.com/photos/2657582/pexels-photo-2657582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        class="w-20 h-20 rounded-full " />
+                                    <h1 class="text-xl mt-5 text-black font-bold">Sunder Pichai</h1>
+                                    <p class="text-base pb-10">CEO Google</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-button-next " style="color: black;" ></div>
+                    <div class="swiper-button-prev " style="color: black;"></i></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact  -->
+
+    <section id="contact-us" class="pb-10">
+        <div class="mx-auto w-11/12 md:w-4/5 relative">
+            <div class="h-48 w-0.2rem bg-green absolute left-2/4 -top-24"></div>
+            <div class="text-center pt-20 reveal">
+                <h1 class="text-green font-bold lg:text-2xl md:text-base sm:text-sm md:pt-10 sm:pt-5">
+                    CONTACT US
+                </h1>
+                <h1 class="text-white font-bold mt-2 md:text-6xl sm:text-xl">
+                    Reach out for a new project or just say hello
+                </h1>
+                <hr class="w-3/12 mx-auto md:my-10 sm:my-5 " />
+            </div>
+
+            <div class="bg-black h-85vh w-full rounded-md p-5 md:p-10 overflow-hidden reveal">
+                <div class="flex">
+                    <div class="w-3/5 ">
+                        <h3 class="font-bold  text-white text-sm">SEND US A MESSAGE</h3>
+                        <div class="flex flex-col mt-2 md:mt-5 pr-5 md:pr-20">
+
+                            <input type="text " placeholder="Your Name"
+                                class="bg-transparent border-b-2 border-gray-300 pt-1 md:pt-4 pr-4 pb-4 text-white focus:outline-none focus:border-green">
+                            <input type="text " placeholder="Your Email"
+                                class="bg-transparent border-b-2 border-gray-300 pt-1 md:pt-4 pr-4 pb-4 text-white focus:outline-none focus:border-green">
+                            <input type="text " placeholder="Your Subject"
+                                class="bg-transparent border-b-2 border-gray-300 pt-1 md:pt-4 pr-4 pb-4 text-white focus:outline-none focus:border-green">
+                            <textarea name="" id="" cols="20" rows="10" placeholder="Your Message"
+                                class="bg-transparent mt-2 focus:outline-none border-b-2 pt-1 md:pt-4 pr-4 pb-4 border-gray-300 h-40"></textarea>
+
+                            <button class="p-2 bg-green mt-2 text-white">Submit</button>
+                        </div>
+                    </div>
+                    <div class="w-2/5 ">
+                        <h3 class="text-sm font-bold  text-white ">CONTACT INFO</h3>
+                        <div class=" mt-5 md:mt-10">
+                            <h3 class="text-sm font-bold text-green">Where To Find Us</h3>
+                            <h3 class="text-sm mt-2">1600 Amphitheatre Parkway Mountain View, CA94043 US</h3>
+
+                            <h3 class="text-sm font-bold text-green mt-5 md:mt-10">Email Us At</h3>
+                            <h3 class="text-sm mt-2">test@gmail.com</h3>
+                            <h3 class="text-sm mt-2">test@gmail.com</h3>
+
+                            <h3 class="text-sm font-bold text-green mt-5 md:mt-10">Call Us At</h3>
+                            <h3 class="text-sm mt-2">092 93232323</h3>
+                            <h3 class="text-sm mt-2">092 93232323</h3>
+                            <h3 class="text-sm mt-2">092 93232323</h3>
+
+                            <div class="flex mt-5 md:mt-10">
+                                <i
+                                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-facebook-f"></i>
+                                <i
+                                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-instagram"></i>
+                                <i
+                                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-twitter"></i>
+                                <i
+                                    class="fa-brands hover:text-green cursor-pointer mr-3 md:mr-5 text-white transition duration-700 ease-in-out fa-telegram"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- footer -->
+
+    <div id="footer">
+        <div class="overflow-hidden  w-full">
+            <footer class="footer bg-base-200 text-base-content">
+                <div class="mx-auto md:w-3/4 md:flex justify-between p-10 md:p-20">
+                    <div class="flex flex-col">
+                        <span class="footer-title">Glint</span>
+                        <a class="link link-hover mt-2" href="#">Home</a>
+                        <a class="link link-hover mt-2" href="#we-are-glint">About</a>
+                        <a class="link link-hover mt-2" href="#what-we-do">What We Do ?</a>
+                        <a class="link link-hover mt-2" href="#recent-work">Works</a>
+                        <a class="link link-hover mt-2" href="#our-client">Clients</a>
+                        <a class="link link-hover mt-2" href="#contact-us">Contact</a>
+                    </div>
+                    <div>
+                        <span class="footer-title">Newsletter</span>
+                        <div class="form-control w-80">
+                            <label class="label">
+                                <span class="label-text mt-2">Quia quo qui sed odit. Quaerat voluptas autem
+                                    necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi
+                                    deserunt iusto porro.</span>
+                            </label>
+                            <div class="relative mt-2 hidden md:block">
+                                <input type="text" placeholder="username@site.com"
+                                    class="input input-bordered w-full pr-16" />
+                                <button class="btn absolute top-0 right-0 rounded-l-none"
+                                    style="background-color: #39b54a; color: white;">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
